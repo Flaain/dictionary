@@ -18,19 +18,10 @@ export class Theme {
 
     switchTheme() {
         switchClasses.toggle();
-
-        if (this.currentTheme === DARK_THEME) {
-            localStorage.setItem('theme', LIGHT_THEME);
-            themeSvg.setSvg(LIGHT_THEME);
-            this.currentTheme = LIGHT_THEME;
-        } else {
-            localStorage.setItem('theme', DARK_THEME);
-            themeSvg.setSvg(DARK_THEME);
-            this.currentTheme = DARK_THEME;
-        }
+        this.currentTheme = this.currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
     }
 
-    setCurrentTheme(value) {
+    checkCurrentTheme(value) {
         this.currentTheme = value;
         switchClasses.toggleOnLoad(value);
     }
