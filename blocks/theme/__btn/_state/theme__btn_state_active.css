@@ -1,0 +1,9 @@
+.theme__btn_state_active {
+    background-color: #AA44E0;
+}
+
+@media (any-hover: hover) {
+    .theme__btn_state_active:hover {
+        background-color: #FF00FF;
+    } 
+ }
