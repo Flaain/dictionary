@@ -1,6 +1,4 @@
-import { themeBtn } from '../utils/variables.js';
-import { checkCurrentTheme } from '../components/checkCurrentTheme.js';
-import { switchTheme } from '../components/switchTheme.js';
+import { LIGHT_THEME, theme, themeBtn } from '../utils/variables.js';
 
-themeBtn.addEventListener("click", switchTheme);
-checkCurrentTheme();
+theme.setCurrentTheme(localStorage.getItem('theme') || LIGHT_THEME);
+themeBtn.addEventListener("click", theme.switchTheme.bind(theme));
