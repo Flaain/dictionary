@@ -1,4 +1,4 @@
-import { LIGHT_THEME, DARK_THEME, themeSvg, switchClasses } from '../utils/variables.js';
+import { LIGHT_THEME, DARK_THEME, themeSvg, toggleClasses } from '../utils/variables.js';
 
 export class Theme {
     
@@ -17,12 +17,12 @@ export class Theme {
     }
 
     switchTheme() {
-        switchClasses.toggle();
+        toggleClasses.toggle();
         this.currentTheme = this.currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
     }
 
     checkCurrentTheme(value) {
         this.currentTheme = value;
-        switchClasses.toggleOnLoad(value);
+        toggleClasses.toggleOnLoad(value);
     }
 }

@@ -1,6 +1,6 @@
 import { searchForm } from '../utils/variables.js';
 
-export class Render {
+export class WordRender {
     constructor() {
         this._word = document.querySelector('.word__target');
     }

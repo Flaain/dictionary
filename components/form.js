@@ -1,4 +1,4 @@
-import { showElements, url } from '../utils/variables.js';
+import { dictionaryApi } from '../utils/variables.js';
 
 export class Form {
     constructor() {
@@ -31,24 +31,7 @@ export class Form {
             if (!this.state.word.trim()) {
                 return;
             } else {
-                fetch(`${url}${this.state.word}`)
-                    .then((response) => {
-                        if (!response.ok) {
-                            throw new Error(`Fetch failed: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then((data) => {
-                        console.log(data);
-                        if (data.length) {
-                            showElements.render();
-                        } else {
-                            throw new Error('No data was returned from the server');
-                        }
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
+                dictionaryApi.fetchWord(this.state.word);
             }
         });
     }

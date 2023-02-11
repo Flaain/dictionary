@@ -1,8 +1,9 @@
+import { DictionaryAPI } from '../components/api.js';
 import { Form } from '../components/form.js';
-import { Render } from '../components/render.js';
+import { WordRender } from '../components/wordRender.js';
 import { Theme } from '../components/theme.js';
 import { ThemeSvg } from '../components/themeSvg.js';
-import { toggleClass } from '../components/toggleClass.js';
+import { ToggleClasses } from '../components/toggleClasses.js';
 
 export const themeBtn = document.querySelector('.theme__btn');
 export const svgWrapper = document.querySelector('.theme__wrapper');
@@ -13,8 +14,6 @@ export const targetWord = document.querySelector('.word__target');
 
 export const LIGHT_THEME = 'light';
 export const DARK_THEME = 'dark';
-
-export const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 
 export const sunSvg = `
     <svg
@@ -39,6 +38,7 @@ export const moonSvg = `
 
 export const theme = new Theme();
 export const themeSvg = new ThemeSvg();
-export const switchClasses = new toggleClass();
-export const searchForm = new Form();
-export const showElements = new Render();
+export const toggleClasses = new ToggleClasses();
+export const form = new Form();
+export const wordRender = new WordRender();
+export const dictionaryApi = new DictionaryAPI();
