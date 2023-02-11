@@ -22,3 +22,34 @@
 @import url(../blocks/theme/__icon/theme__icon.css);
 @import url(../blocks/theme/__icon/_type/theme__icon_type_moon.css);
 @import url(../blocks/theme/__icon/_type/theme__icon_type_sun.css);
+
+@import url(../blocks/main/main.css);
+
+@import url(../blocks/word/word.css);
+@import url(../blocks/word/__speech/word__speech.css);
+@import url(../blocks/word/__seperator/word__seperator.css);
+@import url(../blocks/word/__audio-btn-icon/word__audio-btn-icon.css);
+@import url(../blocks/word/__audio-btn/word__audio-btn.css);
+@import url(../blocks/word/__container/word__container.css);
+@import url(../blocks/word/__description/word__description.css);
+@import url(../blocks/word/__header/word__header.css);
+@import url(../blocks/word/__item/word__item.css);
+@import url(../blocks/word/__link/word__link.css);
+@import url(../blocks/word/__list/word__list.css);
+@import url(../blocks/word/__meaning/word__meaning.css);
+@import url(../blocks/word/__example/word__example.css);
+@import url(../blocks/word/__part-of-speech/word__part-of-speech.css);
+@import url(../blocks/word/__phonetic/word__phonetic.css);
+@import url(../blocks/word/__source/word__source.css);
+@import url(../blocks/word/__synonyms/word__synonyms.css);
+@import url(../blocks/word/__synonym/word__synonym.css);
+@import url(../blocks/word/__target/word__target.css);
+@import url(../blocks/word/__text/word__text.css);
+@import url(../blocks/word/__title/_size/word__title_size_small.css);
+@import url(../blocks/word/__title/word__title.css);
+
+@import url(../blocks/search-form/search-form.css);
+@import url(../blocks/search-form/__input/search-form__input.css);
+@import url(../blocks/search-form/__input/_theme/search-form__input_theme_dark.css);
+@import url(../blocks/search-form/__icon/search-form__icon.css);
+@import url(../blocks/search-form/__btn/search-form__btn.css);

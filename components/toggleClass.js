@@ -1,9 +1,9 @@
-import { themeBtn, body, logo, DARK_THEME } from "../utils/variables.js";
+import { themeBtn, body, logo, DARK_THEME, inputSearch } from "../utils/variables.js";
 
 export class toggleClass {
     constructor() {
-        this.elements = [themeBtn, body, logo];
-        this.classes = ['theme__btn_state_active', 'body_theme_dark', 'logo__svg_theme_dark'];
+        this.elements = [themeBtn, body, logo, inputSearch];
+        this.classes = ['theme__btn_state_active', 'body_theme_dark', 'logo__svg_theme_dark', 'search-form__input_theme_dark'];
     }
 
     toggle() {

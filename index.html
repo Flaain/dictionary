@@ -1,36 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>Dictionary App</title>
-</head>
-<body class="body">
-    <header class="header">
-        <div class="header__container container">
-            <a href="index.html" class="logo logo_place_header">
-                <svg class="logo__svg" width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M12 2C8.69922 2 6 4.69922 6 8V42.418C6 45.5937 8.83203 48 12 48H44V46H12C9.83984 46 8 44.3789 8 42.418C8 40.457 9.80078 39 12 39H44V2H12ZM12 4H42V37H12C10.5078 37 9.09375 37.5391 8 38.418V8C8 5.78125 9.78125 4 12 4ZM15 9C13.9062 9 13 9.90625 13 11V15C13 16.0938 13.9062 17 15 17H36C37.0938 17 38 16.0938 38 15V11C38 9.90625 37.0938 9 36 9H15ZM15 11H36V15H15V11Z"
-                    />
-                </svg>            
-            </a>
-            <div class="tools">
-                <div class="theme">
-                    <button class="theme__btn"></button>
-                    <div class="theme__wrapper">
-                        <svg class="theme__icon theme__icon_type_moon" width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15.9063 5.96875C15.8633 5.97656 15.8203 5.98828 15.7813 6C15.3164 6.10547 14.9883 6.52344 15 7V8H14C13.9688 8 13.9375 8 13.9063 8C13.3555 8.02734 12.9258 8.49609 12.9531 9.04688C12.9805 9.59766 13.4492 10.0274 14 10H15V11C14.9961 11.3594 15.1836 11.6953 15.4961 11.8789C15.8086 12.0586 16.1914 12.0586 16.5039 11.8789C16.8164 11.6953 17.0039 11.3594 17 11V10H18C18.3594 10.0039 18.6953 9.81642 18.8789 9.50392C19.0586 9.19142 19.0586 8.80861 18.8789 8.49611C18.6953 8.18361 18.3594 7.99611 18 8.00002H17V7.00002C17.0117 6.71096 16.8945 6.43361 16.6875 6.2383C16.4766 6.03908 16.1914 5.94141 15.9063 5.96875ZM28.3125 12.9688L27 13.1563C20.2188 14.125 15 19.957 15 27C15 34.7188 21.2813 41 29 41C36.043 41 41.8711 35.7813 42.8438 29L43.0313 27.6875L41.7188 27.875C41.1367 27.957 40.5664 28 40 28C33.3594 28 28 22.6406 28 16C28 15.4336 28.043 14.8633 28.125 14.2813L28.3125 12.9688ZM26.0313 15.5313C26.0235 15.6914 26 15.8359 26 16C26 23.7188 32.2813 30 40 30C40.1641 30 40.3086 29.9766 40.4688 29.9688C39.1289 35.1328 34.5899 39 29 39C22.3594 39 17 33.6406 17 27C17 21.4102 20.8672 16.8672 26.0313 15.5313ZM7.90626 17.9688C7.86329 17.9766 7.82032 17.9883 7.78126 18C7.31642 18.1055 6.98829 18.5234 7.00001 19C6.96876 19 6.93751 19 6.90626 19C6.35548 19.0273 5.92579 19.4961 5.95314 20.0469C5.98048 20.5977 6.44923 21.0274 7.00002 21C6.99611 21.3594 7.18361 21.6953 7.49611 21.8789C7.80861 22.0586 8.19142 22.0586 8.50392 21.8789C8.81642 21.6953 9.00392 21.3594 9.00001 21C9.35939 21.0039 9.69532 20.8164 9.87892 20.5039C10.0586 20.1914 10.0586 19.8086 9.87892 19.4961C9.69533 19.1836 9.35939 18.9961 9.00001 19C9.01173 18.711 8.89454 18.4336 8.68751 18.2383C8.47657 18.0391 8.19142 17.9414 7.90626 17.9688Z"
-                            />
-                        </svg>  
-                    </div>              
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css">
+        <title>Dictionary App</title>
+    </head>
+    <body class="body">
+        <header class="header">
+            <div class="header__container container">
+                <a href="index.html" class="logo logo_place_header">
+                    <svg class="logo__svg" width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C8.69922 2 6 4.69922 6 8V42.418C6 45.5937 8.83203 48 12 48H44V46H12C9.83984 46 8 44.3789 8 42.418C8 40.457 9.80078 39 12 39H44V2H12ZM12 4H42V37H12C10.5078 37 9.09375 37.5391 8 38.418V8C8 5.78125 9.78125 4 12 4ZM15 9C13.9062 9 13 9.90625 13 11V15C13 16.0938 13.9062 17 15 17H36C37.0938 17 38 16.0938 38 15V11C38 9.90625 37.0938 9 36 9H15ZM15 11H36V15H15V11Z"
+                        />
+                    </svg>
+                </a>
+                <div class="tools">
+                    <div class="theme">
+                        <button class="theme__btn"></button>
+                        <div class="theme__wrapper">
+                            <svg class="theme__icon theme__icon_type_moon" width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.9063 5.96875C15.8633 5.97656 15.8203 5.98828 15.7813 6C15.3164 6.10547 14.9883 6.52344 15 7V8H14C13.9688 8 13.9375 8 13.9063 8C13.3555 8.02734 12.9258 8.49609 12.9531 9.04688C12.9805 9.59766 13.4492 10.0274 14 10H15V11C14.9961 11.3594 15.1836 11.6953 15.4961 11.8789C15.8086 12.0586 16.1914 12.0586 16.5039 11.8789C16.8164 11.6953 17.0039 11.3594 17 11V10H18C18.3594 10.0039 18.6953 9.81642 18.8789 9.50392C19.0586 9.19142 19.0586 8.80861 18.8789 8.49611C18.6953 8.18361 18.3594 7.99611 18 8.00002H17V7.00002C17.0117 6.71096 16.8945 6.43361 16.6875 6.2383C16.4766 6.03908 16.1914 5.94141 15.9063 5.96875ZM28.3125 12.9688L27 13.1563C20.2188 14.125 15 19.957 15 27C15 34.7188 21.2813 41 29 41C36.043 41 41.8711 35.7813 42.8438 29L43.0313 27.6875L41.7188 27.875C41.1367 27.957 40.5664 28 40 28C33.3594 28 28 22.6406 28 16C28 15.4336 28.043 14.8633 28.125 14.2813L28.3125 12.9688ZM26.0313 15.5313C26.0235 15.6914 26 15.8359 26 16C26 23.7188 32.2813 30 40 30C40.1641 30 40.3086 29.9766 40.4688 29.9688C39.1289 35.1328 34.5899 39 29 39C22.3594 39 17 33.6406 17 27C17 21.4102 20.8672 16.8672 26.0313 15.5313ZM7.90626 17.9688C7.86329 17.9766 7.82032 17.9883 7.78126 18C7.31642 18.1055 6.98829 18.5234 7.00001 19C6.96876 19 6.93751 19 6.90626 19C6.35548 19.0273 5.92579 19.4961 5.95314 20.0469C5.98048 20.5977 6.44923 21.0274 7.00002 21C6.99611 21.3594 7.18361 21.6953 7.49611 21.8789C7.80861 22.0586 8.19142 22.0586 8.50392 21.8789C8.81642 21.6953 9.00392 21.3594 9.00001 21C9.35939 21.0039 9.69532 20.8164 9.87892 20.5039C10.0586 20.1914 10.0586 19.8086 9.87892 19.4961C9.69533 19.1836 9.35939 18.9961 9.00001 19C9.01173 18.711 8.89454 18.4336 8.68751 18.2383C8.47657 18.0391 8.19142 17.9414 7.90626 17.9688Z"
+                                />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <script type="module" src="./pages/index.js"></script>
-</body>
+        </header>
+        <main class="main">
+            <section class="word">
+                <div class="word__container container">
+                    <form class="search-form">
+                        <input type="text" class="search-form__input" placeholder="Type a word..." name="word" autocomplete="off" />
+                        <button class="search-form__btn">
+                            <svg class="search-form__icon" width="30" height="30" viewBox="0 0 30 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13 3C7.489 3 3 7.489 3 13C3 18.511 7.489 23 13 23C15.3965 23 17.5974 22.149 19.3223 20.7363L25.293 26.707C25.5438 26.9683 25.9162 27.0735 26.2667 26.9821C26.6171 26.8908 26.8908 26.6171 26.9821 26.2667C27.0735 25.9162 26.9683 25.5438 26.707 25.293L20.7363 19.3223C22.149 17.5974 23 15.3965 23 13C23 7.489 18.511 3 13 3ZM13 5C17.4301 5 21 8.56988 21 13C21 17.4301 17.4301 21 13 21C8.56988 21 5 17.4301 5 13C5 8.56988 8.56988 5 13 5Z"
+                                />
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="word__header">
+                        <div class="word__text">
+                            <h1 class="word__target">Keyboard</h1>
+                            <span class="word__phonetic">/ˈkiːbɔːd/</span>
+                        </div>
+                        <button class="word__audio-btn">
+                            <svg class="word__audio-btn-icon" width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 5.25V44.7461L43.5703 25L10 5.25Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="word__part-of-speech">
+                        <span class="word__speech">noun</span>
+                        <div class="word__seperator"></div>
+                    </div>
+                    <div class="word__meaning">
+                        <h2 class="word__title">Meaning</h2>
+                        <ul class="word__list">
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel incidunt assumenda nihil, laboriosam harum tempore temporibus quae obcaecati ducimus asperiores cum quas nulla rerum dignissimos voluptatibus libero vero iure, delectus eum aspernatur quis quo dicta quos. Cupiditate at ab tempore libero illo, perferendis vel iure a repudiandae, distinctio delectus!
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, quibusdam?
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed rerum dolorem repellendus quis aut voluptates facilis delectus, et fuga, maiores enim. Assumenda, ratione distinctio saepe deleniti velit illum laboriosam delectus dolorem neque eveniet, ipsum reprehenderit laudantium animi quibusdam debitis dignissimos itaque aut vitae vero temporibus. Eaque, unde. Sunt expedita corrupti perferendis, voluptates maiores quam tempora earum quisquam atque cum voluptatibus sequi ad enim provident delectus optio a repellendus impedit architecto consequatur, nesciunt natus harum! Voluptatum fuga quisquam dicta totam cumque nobis animi quibusdam, nostrum natus sed corporis et nihil iste molestias provident, dolores culpa, consequuntur neque autem doloremque. Provident, amet!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="word__example">
+                        <h2 class="word__title">Example</h2>
+                        <ul class="word__list">
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel incidunt assumenda nihil, laboriosam harum tempore temporibus quae obcaecati ducimus asperiores cum quas nulla rerum dignissimos voluptatibus libero vero iure, delectus eum aspernatur quis quo dicta quos. Cupiditate at ab tempore libero illo, perferendis vel iure a repudiandae, distinctio delectus!
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, quibusdam?
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed rerum dolorem repellendus quis aut voluptates facilis delectus, et fuga, maiores enim. Assumenda, ratione distinctio saepe deleniti velit illum laboriosam delectus dolorem neque eveniet, ipsum reprehenderit laudantium animi quibusdam debitis dignissimos itaque aut vitae vero temporibus. Eaque, unde. Sunt expedita corrupti perferendis, voluptates maiores quam tempora earum quisquam atque cum voluptatibus sequi ad enim provident delectus optio a repellendus impedit architecto consequatur, nesciunt natus harum! Voluptatum fuga quisquam dicta totam cumque nobis animi quibusdam, nostrum natus sed corporis et nihil iste molestias provident, dolores culpa, consequuntur neque autem doloremque. Provident, amet!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="word__synonyms">
+                        <h2 class="word__title">Synonyms</h2>
+                        <span class="word__synonym">electronic keyboard</span>   
+                    </div>
+                    <div class="word__part-of-speech">
+                        <span class="word__speech">verb</span>
+                        <div class="word__seperator"></div>
+                    </div>
+                    <div class="word__meaning">
+                        <h2 class="word__title">Meaning</h2>
+                        <ul class="word__list">
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel incidunt assumenda nihil, laboriosam harum tempore temporibus quae obcaecati ducimus asperiores cum quas nulla rerum dignissimos voluptatibus libero vero iure, delectus eum aspernatur quis quo dicta quos. Cupiditate at ab tempore libero illo, perferendis vel iure a repudiandae, distinctio delectus!
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, quibusdam?
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed rerum dolorem repellendus quis aut voluptates facilis delectus, et fuga, maiores enim. Assumenda, ratione distinctio saepe deleniti velit illum laboriosam delectus dolorem neque eveniet, ipsum reprehenderit laudantium animi quibusdam debitis dignissimos itaque aut vitae vero temporibus. Eaque, unde. Sunt expedita corrupti perferendis, voluptates maiores quam tempora earum quisquam atque cum voluptatibus sequi ad enim provident delectus optio a repellendus impedit architecto consequatur, nesciunt natus harum! Voluptatum fuga quisquam dicta totam cumque nobis animi quibusdam, nostrum natus sed corporis et nihil iste molestias provident, dolores culpa, consequuntur neque autem doloremque. Provident, amet!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="word__example">
+                        <h2 class="word__title">Example</h2>
+                        <ul class="word__list">
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel incidunt assumenda nihil, laboriosam harum tempore temporibus quae obcaecati ducimus asperiores cum quas nulla rerum dignissimos voluptatibus libero vero iure, delectus eum aspernatur quis quo dicta quos. Cupiditate at ab tempore libero illo, perferendis vel iure a repudiandae, distinctio delectus!
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, quibusdam?
+                                </p>
+                            </li>
+                            <li class="word__item">
+                                <p class="word__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed rerum dolorem repellendus quis aut voluptates facilis delectus, et fuga, maiores enim. Assumenda, ratione distinctio saepe deleniti velit illum laboriosam delectus dolorem neque eveniet, ipsum reprehenderit laudantium animi quibusdam debitis dignissimos itaque aut vitae vero temporibus. Eaque, unde. Sunt expedita corrupti perferendis, voluptates maiores quam tempora earum quisquam atque cum voluptatibus sequi ad enim provident delectus optio a repellendus impedit architecto consequatur, nesciunt natus harum! Voluptatum fuga quisquam dicta totam cumque nobis animi quibusdam, nostrum natus sed corporis et nihil iste molestias provident, dolores culpa, consequuntur neque autem doloremque. Provident, amet!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="word__source">
+                        <h3 class="word__title word__title_size_small">Source</h3>
+                        <a href="https://en.wiktionary.org/wiki/keyboard" target="_blank" class="word__link">https://en.wiktionary.org/wiki/keyboard</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script type="module" src="./pages/index.js"></script>
+    </body>
 </html>
