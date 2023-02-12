@@ -1,4 +1,4 @@
-import { searchForm } from '../utils/variables.js';
+import { form } from '../utils/variables.js';
 
 export class WordRender {
     constructor() {
@@ -14,6 +14,6 @@ export class WordRender {
     }
 
     render() {
-        this.word = searchForm.state;
+        this.word = form.state.word;
     }
 }
