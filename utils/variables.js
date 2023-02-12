@@ -5,6 +5,11 @@ import { Theme } from '../components/theme.js';
 import { ThemeSvg } from '../components/themeSvg.js';
 import { ToggleClasses } from '../components/toggleClasses.js';
 
+export const selectors = {
+    form: '.search-form',
+    input: '.search-form__input'
+}
+
 export const themeBtn = document.querySelector('.theme__btn');
 export const svgWrapper = document.querySelector('.theme__wrapper');
 export const body = document.querySelector('.body');
@@ -39,6 +44,6 @@ export const moonSvg = `
 export const theme = new Theme();
 export const themeSvg = new ThemeSvg();
 export const toggleClasses = new ToggleClasses();
-export const form = new Form();
+export const form = new Form(selectors);
 export const wordRender = new WordRender();
 export const dictionaryApi = new DictionaryAPI();

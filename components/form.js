@@ -1,12 +1,14 @@
 import { dictionaryApi } from '../utils/variables.js';
 
 export class Form {
-    constructor() {
-        this._form = document.querySelector('.search-form');
-        this._input = document.querySelector('.search-form__input');
+    constructor(selectors) {
+        this._form = document.querySelector(selectors.form);
+        this._input = this._form.querySelector(selectors.input);
         this._state = {
             word: '',
         };
+
+        this._bindEventHandlers();
     }
 
     get state() {
@@ -14,25 +16,26 @@ export class Form {
     }
 
     set state(value) {
-        this._state.word = value;
+        return this._state.word = value;
     }
 
-    search() {
+    _bindEventHandlers() {
         this._input.addEventListener('input', (event) => {
-            const value = event.target.value;
-            this.state = value;
+            this.state = event.target.value;
         });
-    }
 
-    submit() {
         this._form.addEventListener('submit', (event) => {
             event.preventDefault();
-
-            if (!this.state.word.trim()) {
-                return;
-            } else {
-                dictionaryApi.fetchWord(this.state.word);
-            }
+            console.log(this.state);
+            this._submitForm();
         });
+    }
+
+    _submitForm() {
+        if (!this.state.word.trim()) {
+            return;
+        } else {
+            dictionaryApi.fetchWord(this.word);
+        }
     }
 }
