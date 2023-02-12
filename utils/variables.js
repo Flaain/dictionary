@@ -1,4 +1,4 @@
-import { DictionaryAPI } from '../components/api.js';
+import { DictionaryAPI } from '../components/DictionaryAPI.js';
 import { Form } from '../components/form.js';
 import { WordRender } from '../components/wordRender.js';
 import { Theme } from '../components/theme.js';
