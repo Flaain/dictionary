@@ -20,7 +20,7 @@ export class Form {
     search() {
         this._input.addEventListener('input', (event) => {
             const value = event.target.value;
-            this.state.word = value;
+            this.state = value;
         });
     }
 
