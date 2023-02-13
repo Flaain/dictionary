@@ -1,10 +1,10 @@
-import { LIGHT_THEME, DARK_THEME, toggleClasses, svgWrapper, sunSvg, moonSvg } from '../utils/variables.js';
+import { LIGHT_THEME, DARK_THEME, toggleClasses, sunSvg, moonSvg } from '../utils/variables.js';
 
 export default class Theme {
     
-    constructor() {
+    constructor({ svgWrapper }) {
         this._currentTheme = localStorage.getItem('theme') || LIGHT_THEME;
-        this._svgWrapper = svgWrapper;
+        this._svgWrapper = document.querySelector(svgWrapper);
     }
 
     get currentTheme() {
@@ -14,20 +14,16 @@ export default class Theme {
     set currentTheme(value) {
         this._currentTheme = value;
         localStorage.setItem('theme', value);
-        this.svgWrapper = this.currentTheme === DARK_THEME ? sunSvg : moonSvg; 
-    }
-
-    get svgWrapper() {
-        return this._svgWrapper;
-    }
-
-    set svgWrapper(value) {
-        return this._svgWrapper.innerHTML = value;
+        this._updateSvg();
     }
     
     switchTheme() {
         toggleClasses.toggle();
         this.currentTheme = this.currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
+    }
+
+    _updateSvg() {
+        this._svgWrapper.innerHTML = this.currentTheme === DARK_THEME ? sunSvg : moonSvg; 
     }
 
     checkCurrentTheme(value) {
