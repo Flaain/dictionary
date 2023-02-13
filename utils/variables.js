@@ -1,13 +1,13 @@
-import { DictionaryAPI } from '../components/DictionaryAPI.js';
-import { Form } from '../components/form.js';
-import { WordRender } from '../components/wordRender.js';
-import { Theme } from '../components/theme.js';
-import { ThemeSvg } from '../components/themeSvg.js';
-import { ToggleClasses } from '../components/toggleClasses.js';
+import Form from '../components/form.js';
+import WordRender from '../components/wordRender.js';
+import Theme from '../components/theme.js';
+import ToggleClasses  from '../components/toggleClasses.js';
+import DictionaryAPI from '../components/DictionaryAPI.js';
 
 export const selectors = {
     form: '.search-form',
-    input: '.search-form__input'
+    input: '.search-form__input',
+    url: 'https://api.dictionaryapi.dev/api/v2/entries/en/'
 }
 
 export const themeBtn = document.querySelector('.theme__btn');
@@ -42,8 +42,7 @@ export const moonSvg = `
     </svg>`;
 
 export const theme = new Theme();
-export const themeSvg = new ThemeSvg();
 export const toggleClasses = new ToggleClasses();
 export const form = new Form(selectors);
+export const dictionaryapi = new DictionaryAPI(selectors);
 export const wordRender = new WordRender();
-export const dictionaryApi = new DictionaryAPI();

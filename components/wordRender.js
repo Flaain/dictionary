@@ -1,6 +1,6 @@
 import { form } from '../utils/variables.js';
 
-export class WordRender {
+export default class WordRender {
     constructor() {
         this._word = document.querySelector('.word__target');
     }
@@ -13,7 +13,7 @@ export class WordRender {
         return this._word.textContent = value;
     }
 
-    render() {
+    render(data) {
         this.word = form.state.word;
     }
 }

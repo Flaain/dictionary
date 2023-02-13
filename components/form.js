@@ -1,6 +1,6 @@
-import { dictionaryApi } from '../utils/variables.js';
+import { dictionaryapi } from "../utils/variables.js";
 
-export class Form {
+export default class Form {
     constructor(selectors) {
         this._form = document.querySelector(selectors.form);
         this._input = this._form.querySelector(selectors.input);
@@ -35,7 +35,7 @@ export class Form {
         if (!this.state.word.trim()) {
             return;
         } else {
-            dictionaryApi.fetchWord(this.word);
+            dictionaryapi.fetchWord(this.state.word);
         }
     }
 }

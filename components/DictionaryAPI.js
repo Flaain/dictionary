@@ -1,12 +1,21 @@
-import { wordRender } from "../utils/variables.js";
+import { wordRender } from '../utils/variables.js';
 
-export class DictionaryAPI {
-    constructor() {
-        this._url = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
+export default class DictionaryAPI {
+    
+    constructor(selectors) {
+        this._url = selectors.url;
+    }
+
+    get url() {
+        return this._url
+    }
+
+    set url(value) {
+        return this._url = value;
     }
 
     fetchWord(word) {
-        fetch(`${this._url}${word}`)
+        fetch(`${this.url}${word}`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`Fetch failed: ${response.status}`);
@@ -16,7 +25,7 @@ export class DictionaryAPI {
         .then((data) => {
             console.log(data);
             if (data.length) {
-                wordRender.render();
+                wordRender.render(data);
             } else {
                 throw new Error('No data was returned from the server');
             }
