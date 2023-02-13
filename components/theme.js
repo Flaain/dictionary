@@ -2,9 +2,9 @@ import { LIGHT_THEME, DARK_THEME, toggleClasses, sunSvg, moonSvg } from '../util
 
 export default class Theme {
     
-    constructor({ svgWrapper }) {
+    constructor({ svgWrapper: svgWrapperSelector }) {
         this._currentTheme = localStorage.getItem('theme') || LIGHT_THEME;
-        this._svgWrapper = document.querySelector(svgWrapper);
+        this._svgWrapper = document.querySelector(svgWrapperSelector);
     }
 
     get currentTheme() {

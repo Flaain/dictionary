@@ -1,9 +1,9 @@
 import { dictionaryapi } from "../utils/variables.js";
 
 export default class Form {
-    constructor({ form, input }) {
-        this._form = document.querySelector(form);
-        this._input = this._form.querySelector(input);
+    constructor({ form: formSelector, input: inputSelector }) {
+        this._form = document.querySelector(formSelector);
+        this._input = this._form.querySelector(inputSelector);
         this._state = {
             word: '',
         };
