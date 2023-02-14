@@ -1,36 +1,38 @@
-import Form from '../components/form.js';
-import WordRender from '../components/wordRender.js';
-import Theme from '../components/theme.js';
-import ToggleClasses  from '../components/toggleClasses.js';
-import DictionaryAPI from '../components/DictionaryAPI.js';
+import Form from "../components/form.js";
+import WordRender from "../components/wordRender.js";
+import Theme from "../components/theme.js";
+import ToggleClasses from "../components/toggleClasses.js";
+import DictionaryAPI from "../components/DictionaryAPI.js";
 
 export const selectors = {
-    form: '.search-form',
-    input: '.search-form__input',
-    svgWrapper: '.theme__wrapper',
-    templateWordHeader: '.template__word-header',
-    templateWordPartOfSpeech: '.template__part-of-speech',
-    word: '.word__target',
-    partOfSpeechContainer: 'word__part-of-speech',
-    speech: '.word__speech',
-    wordContainer: '.word__container',
-    wordMeaning: '.word__meaning',
-    wordExample: '.word__example',
-    wordHeader: '.word__header',
-    phonetic: '.word__phonetic',
-    wordText: '.word__text',
-    audioBtn: '.word__audio-btn',
-    url: 'https://api.dictionaryapi.dev/api/v2/entries/en/',
-}
+  form: ".search-form",
+  input: ".search-form__input",
+  svgWrapper: ".theme__wrapper",
+  templateWordHeader: ".template__word-header",
+  templateWordPartOfSpeech: ".template__part-of-speech",
+  word: ".word__target",
+  partOfSpeechContainer: "word__part-of-speech",
+  speech: ".word__speech",
+  wordContainer: ".word__container",
+  wordMeaning: ".word__meaning",
+  wordExample: ".word__example",
+  wordSource: ".word__source",
+  wordSynonyms: ".word__synonyms",
+  wordHeader: ".word__header",
+  phonetic: ".word__phonetic",
+  wordText: ".word__text",
+  audioBtn: ".word__audio-btn",
+  url: "https://api.dictionaryapi.dev/api/v2/entries/en/",
+};
 
-export const themeBtn = document.querySelector('.theme__btn');
-export const svgWrapper = document.querySelector('.theme__wrapper');
-export const body = document.querySelector('.body');
-export const logo = document.querySelector('.logo__svg');
-export const inputSearch = document.querySelector('.search-form__input');
+export const themeBtn = document.querySelector(".theme__btn");
+export const svgWrapper = document.querySelector(".theme__wrapper");
+export const body = document.querySelector(".body");
+export const logo = document.querySelector(".logo__svg");
+export const inputSearch = document.querySelector(".search-form__input");
 
-export const LIGHT_THEME = 'light';
-export const DARK_THEME = 'dark';
+export const LIGHT_THEME = "light";
+export const DARK_THEME = "dark";
 
 export const sunSvg = `
     <svg
