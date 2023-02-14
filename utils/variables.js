@@ -8,7 +8,19 @@ export const selectors = {
     form: '.search-form',
     input: '.search-form__input',
     svgWrapper: '.theme__wrapper',
-    url: 'https://api.dictionaryapi.dev/api/v2/entries/en/'
+    templateWordHeader: '.template__word-header',
+    templateWordPartOfSpeech: '.template__part-of-speech',
+    word: '.word__target',
+    partOfSpeechContainer: 'word__part-of-speech',
+    speech: '.word__speech',
+    wordContainer: '.word__container',
+    wordMeaning: '.word__meaning',
+    wordExample: '.word__example',
+    wordHeader: '.word__header',
+    phonetic: '.word__phonetic',
+    wordText: '.word__text',
+    audioBtn: '.word__audio-btn',
+    url: 'https://api.dictionaryapi.dev/api/v2/entries/en/',
 }
 
 export const themeBtn = document.querySelector('.theme__btn');
@@ -16,7 +28,6 @@ export const svgWrapper = document.querySelector('.theme__wrapper');
 export const body = document.querySelector('.body');
 export const logo = document.querySelector('.logo__svg');
 export const inputSearch = document.querySelector('.search-form__input');
-export const targetWord = document.querySelector('.word__target');
 
 export const LIGHT_THEME = 'light';
 export const DARK_THEME = 'dark';
@@ -46,4 +57,4 @@ export const theme = new Theme(selectors);
 export const toggleClasses = new ToggleClasses();
 export const form = new Form(selectors);
 export const dictionaryapi = new DictionaryAPI(selectors);
-export const wordRender = new WordRender();
+export const wordRender = new WordRender(selectors);
