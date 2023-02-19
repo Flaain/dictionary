@@ -1,8 +1,8 @@
 import Form from "../components/form.js";
-import WordRender from "../components/wordRender.js";
 import Theme from "../components/theme.js";
 import ToggleClasses from "../components/toggleClasses.js";
 import DictionaryAPI from "../components/DictionaryAPI.js";
+import WordComponent from "../components/wordComponent.js";
 
 export const selectors = {
   form: ".search-form",
@@ -11,7 +11,7 @@ export const selectors = {
   templateWordHeader: ".template__word-header",
   templateWordPartOfSpeech: ".template__part-of-speech",
   word: ".word__target",
-  partOfSpeechContainer: "word__part-of-speech",
+  partOfSpeechContainer: ".word__part-of-speech",
   speech: ".word__speech",
   wordContainer: ".word__container",
   wordMeaning: ".word__meaning",
@@ -59,4 +59,4 @@ export const theme = new Theme(selectors);
 export const toggleClasses = new ToggleClasses();
 export const form = new Form(selectors);
 export const dictionaryapi = new DictionaryAPI(selectors);
-export const wordRender = new WordRender(selectors);
+export const wordComponent = new WordComponent(selectors);

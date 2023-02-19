@@ -1,4 +1,4 @@
-import { wordRender } from "../utils/variables.js";
+import { wordComponent } from "../utils/variables.js";
 
 export default class DictionaryAPI {
   constructor(selectors) {
@@ -14,9 +14,11 @@ export default class DictionaryAPI {
   }
 
   fetchWord(word) {
+    wordComponent.showLoading();
     fetch(`${this.url}${word}`)
       .then((response) => {
         if (!response.ok) {
+          alert(`Failed to fetch - ${response.status}`)
           throw new Error(`Fetch failed: ${response.status}`);
         }
         return response.json();
@@ -24,13 +26,16 @@ export default class DictionaryAPI {
       .then((data) => {
         console.log(data);
         if (data.length) {
-          wordRender.render(data);
+          wordComponent.render(data);
         } else {
           throw new Error("No data was returned from the server");
         }
       })
       .catch((error) => {
         console.error(error);
-      });
+      })
+      .finally(() => {
+        wordComponent.hideLoading();
+      })
   }
 }

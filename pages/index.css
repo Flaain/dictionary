@@ -53,3 +53,11 @@
 @import url(../blocks/search-form/__input/_theme/search-form__input_theme_dark.css);
 @import url(../blocks/search-form/__icon/search-form__icon.css);
 @import url(../blocks/search-form/__btn/search-form__btn.css);
+
+@import url(../blocks/pre-search/pre-search.css);
+@import url(../blocks/pre-search/__img/pre-search__img.css);
+@import url(../blocks/pre-search/__title/pre-search__title.css);
+
+@import url(../blocks/word-preloader/word-preloader.css);
+@import url(../blocks/word-preloader/_type/word-preloader_type_circular.css);
+@import url(../blocks/word-preloader/__path/word-preloader__path.css);

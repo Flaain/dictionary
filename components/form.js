@@ -36,6 +36,8 @@ export default class Form {
       return;
     } else {
       dictionaryapi.fetchWord(this.state.word);
+      this._input.value = '';
+      this._input.blur();
     }
   }
 }
