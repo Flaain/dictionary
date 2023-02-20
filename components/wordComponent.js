@@ -199,6 +199,229 @@ export default class WordComponent {
 
     this._wordContainer.insertBefore(this._wordMeaning, this._partOfSpeechContainer.nextSibling);
 
+    switch (document.querySelector(this.selectors.speech).textContent) {
+      case "noun":
+        if (
+          this._longestDefinitionsByPartOfSpeech["noun"]
+            .filter((element) => element.example)
+            .map((element) => element.example).length > 0 &&
+          !document.querySelector(this.selectors.wordExample)
+        ) {
+          this._wordExample = document.createElement("div");
+          this._wordExample.classList.add(this.selectors.wordExample.slice(1));
+          this._wordExample.insertAdjacentHTML(
+            "afterbegin",
+            `
+        <h2 class="word__title">Example</h2>
+        <ul class="word__list">
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["noun"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[0]
+                }</p>
+            </li>
+            ${
+              this._longestDefinitionsByPartOfSpeech["noun"]
+                .filter((element) => element.example)
+                .map((element) => element.example)[1]
+                ? `
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["noun"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[1]
+                }</p>
+            </li>
+            `
+                : ""
+            }
+            ${
+              this._longestDefinitionsByPartOfSpeech["noun"]
+                .filter((element) => element.example)
+                .map((element) => element.example)[2]
+                ? `
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["noun"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[2]
+                }</p>
+            </li>
+            `
+                : ""
+            }
+            ${
+              this._longestDefinitionsByPartOfSpeech["noun"]
+                .filter((element) => element.example)
+                .map((element) => element.example)[3]
+                ? `
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["noun"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[3]
+                }</p>
+            </li>
+            `
+                : ""
+            }
+            
+        </ul>
+        `
+          );
+
+          this._wordContainer.insertBefore(this._wordExample, this._wordMeaning.nextSibling);
+        }
+        break;
+      case "verb":
+        if (
+          this._longestDefinitionsByPartOfSpeech["verb"]
+            .filter((element) => element.example)
+            .map((element) => element.example).length > 0 &&
+          !document.querySelector(this.selectors.wordExample)
+        ) {
+          this._wordExample = document.createElement("div");
+          this._wordExample.classList.add(this.selectors.wordExample.slice(1));
+          this._wordExample.insertAdjacentHTML(
+            "afterbegin",
+            `
+        <h2 class="word__title">Example</h2>
+        <ul class="word__list">
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["verb"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[0]
+                }</p>
+            </li>
+            ${
+              this._longestDefinitionsByPartOfSpeech["verb"]
+                .filter((element) => element.example)
+                .map((element) => element.example)[1]
+                ? `
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["verb"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[1]
+                }</p>
+            </li>
+            `
+                : ""
+            }
+            ${
+              this._longestDefinitionsByPartOfSpeech["verb"]
+                .filter((element) => element.example)
+                .map((element) => element.example)[2]
+                ? `
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["verb"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[2]
+                }</p>
+            </li>
+            `
+                : ""
+            }
+            ${
+              this._longestDefinitionsByPartOfSpeech["verb"]
+                .filter((element) => element.example)
+                .map((element) => element.example)[3]
+                ? `
+            <li class="word__item">
+                <p class="word__description">${
+                  this._longestDefinitionsByPartOfSpeech["verb"]
+                    .filter((element) => element.example)
+                    .map((element) => element.example)[3]
+                }</p>
+            </li>
+            `
+                : ""
+            }
+            
+        </ul>
+        `
+          );
+          this._wordContainer.insertBefore(this._wordExample, this._wordMeaning.nextSibling);
+        }
+        break;
+      case "adjective":
+        if (
+          this._longestDefinitionsByPartOfSpeech["adjective"]
+            .filter((element) => element.example)
+            .map((element) => element.example).length > 0 &&
+          !document.querySelector(this.selectors.wordExample)
+        ) {
+          this._wordExample = document.createElement("div");
+          this._wordExample.classList.add(this.selectors.wordExample.slice(1));
+          this._wordExample.insertAdjacentHTML(
+            "afterbegin",
+            `
+          <h2 class="word__title">Example</h2>
+          <ul class="word__list">
+              <li class="word__item">
+                  <p class="word__description">${
+                    this._longestDefinitionsByPartOfSpeech["adjective"]
+                      .filter((element) => element.example)
+                      .map((element) => element.example)[0]
+                  }</p>
+              </li>
+              ${
+                this._longestDefinitionsByPartOfSpeech["adjective"]
+                  .filter((element) => element.example)
+                  .map((element) => element.example)[1]
+                  ? `
+              <li class="word__item">
+                  <p class="word__description">${
+                    this._longestDefinitionsByPartOfSpeech["adjective"]
+                      .filter((element) => element.example)
+                      .map((element) => element.example)[1]
+                  }</p>
+              </li>
+              `
+                  : ""
+              }
+              ${
+                this._longestDefinitionsByPartOfSpeech["adjective"]
+                  .filter((element) => element.example)
+                  .map((element) => element.example)[2]
+                  ? `
+              <li class="word__item">
+                  <p class="word__description">${
+                    this._longestDefinitionsByPartOfSpeech["adjective"]
+                      .filter((element) => element.example)
+                      .map((element) => element.example)[2]
+                  }</p>
+              </li>
+              `
+                  : ""
+              }
+              ${
+                this._longestDefinitionsByPartOfSpeech["adjective"]
+                  .filter((element) => element.example)
+                  .map((element) => element.example)[3]
+                  ? `
+              <li class="word__item">
+                  <p class="word__description">${
+                    this._longestDefinitionsByPartOfSpeech["adjective"]
+                      .filter((element) => element.example)
+                      .map((element) => element.example)[3]
+                  }</p>
+              </li>
+              `
+                  : ""
+              }
+              
+          </ul>
+          `
+          );
+          this._wordContainer.insertBefore(this._wordExample, this._wordMeaning.nextSibling);
+        }
+        break;
+    }
+
     this._bindEventHandlers();
   }
 
